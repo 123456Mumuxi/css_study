@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>通过表单伪类创建个性化表单</title>
+        <style>
+            input:checked+label {
+                color: seagreen;
+                font-weight: bold;
+            }
+
+            input :nth-of-type(-n+2) {
+                outline: none;
+                width: 200px;
+            }
+
+            input:disabled {
+                color: yellowgreen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="">
+            <input type="text" disabled value="Hello CSS3"><br>
+            <input type="text" value="Hello CSS3">
+            <hr>
+            <input type="radio" name="sex" id="boy">
+            <label for="boy">男</label>
+            <input type="radio" name="sex" checked id="girl">
+            <label for="girl">女</label>
+        </form>
+    </body>
+
+</html>

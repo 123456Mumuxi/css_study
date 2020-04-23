@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transitionend动画API接口</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        position: relative;
+      }
+      div::before {
+        content: "后盾人";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10%;
+        background: #95a5a6;
+        font-size: 2em;
+        color: #fcfdfd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 2s;
+      }
+      div:hover::before {
+        transform: rotate(360deg);
+      }
+      div::after {
+        content: "houdunren.com";
+        position: absolute;
+        bottom: -50px;
+        width: 200px;
+        text-align: center;
+        font-size: 1.5em;
+        color: #bdc3c7;
+        transform: translateX(-999px) skew(45deg);
+        transition: 1s;
+      }
+      div.move::after {
+        transform: translateX(0px) skew(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+    </main>
+    <script>
+      document
+        .querySelector("div")
+        .addEventListener("transitionend", function (e) {
+          document.querySelector("div").className = "move";
+        });
+    </script>
+  </body>
+</html>

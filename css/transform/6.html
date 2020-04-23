@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图集效果</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #353b48;
+        border: solid 2px #adb6c2;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+        overflow: hidden;
+        transition: 1s;
+      }
+      div > img {
+        /* filter: blur(10px); */
+        height: 100%;
+        /* transition: 1s; */
+      }
+      /* div > img:hover {
+        filter: none;
+        transform: scale(1.5);
+      } */
+      main:hover div {
+        filter: blur(15px);
+        transform: scale(0.5);
+      }
+      main:hover div:hover {
+        transform: scale(1.5);
+        filter: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div><img src="45.jpg" alt="" /></div>
+      <div><img src="46.jpg" alt="" /></div>
+      <div><img src="47.jpg" alt="" /></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开发BOOTSTRAP栅格系统</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        padding-top: 100px;
+      }
+
+      .container {
+        margin: 0 auto;
+        border: solid 5px silver;
+        width: 1020px;
+        height: 320px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px 10px;
+      }
+
+      /* .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px 10px;
+      } */
+
+      div {
+        background: blueviolet;
+        /* height: 100px; */
+        background-clip: content-box !important;
+        padding: 10px;
+        box-sizing: border-box;
+        border: solid 1px blueviolet;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .c-1 {
+        grid-column: span 1;
+      }
+      .c-2 {
+        grid-column: span 2;
+      }
+      .c-3 {
+        grid-column: span 3;
+      }
+      .c-4 {
+        grid-column: span 4;
+      }
+      .c-5 {
+        grid-column: span 5;
+      }
+      .c-6 {
+        grid-column: span 6;
+      }
+      .c-7 {
+        grid-column: span 7;
+      }
+      .c-8 {
+        grid-column: span 8;
+      }
+      .r-1 {
+        grid-row-end: span 1;
+      }
+      .r-2 {
+        grid-row-end: span 2;
+      }
+      .r-3 {
+        grid-row-end: span 3;
+      }
+      .blue {
+        background: cadetblue;
+      }
+
+      .red {
+        background: crimson;
+      }
+      .green {
+        background: darkgreen;
+      }
+      .yellow {
+        background: goldenrod;
+      }
+      .pink {
+        background: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="container">
+      <div class="c-3 blue">1</div>
+      <div class="c-6">2</div>
+      <div class="c-3 red">3</div>
+      <div class="c-2 r-2 pink">4</div>
+      <div class="c-3 r-2 yellow">5</div>
+      <div class="c-7 green">6</div>
+      <div class="c-1 blue">7</div>
+      <div class="c-6 red">8</div>
+    </article>
+  </body>
+</html>

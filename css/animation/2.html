@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多动画控制移动端引导背景页</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: #2c3e50;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        transform: scale(0);
+        animation-name: scale, background, radius;
+        animation-duration: 2s, 4s;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main::after {
+        content: "houdunren.com";
+        font-size: 2em;
+        color: white;
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes opacity {
+        to {
+          opacity: 0.8;
+        }
+      }
+      @keyframes scale {
+        25% {
+          transform: scale(0.5);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(0.5) rotate(360deg);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      @keyframes background {
+        25% {
+          background: #27ae60;
+        }
+        50% {
+          background: #e74c3c;
+        }
+        75% {
+          background: #8e44ad;
+        }
+        to {
+          background: #f80404;
+        }
+      }
+      @keyframes radius {
+        25% {
+          border-radius: 25%;
+        }
+        50% {
+          border-radius: 50%;
+        }
+        75% {
+          border-radius: 75%;
+        }
+        to {
+          border-radius: 0%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+  </body>
+</html>

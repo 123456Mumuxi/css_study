@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>细线无边框表格样式</title>
+    <style>
+      table {
+        width: 500px;
+        border: none;
+        border-collapse: collapse;
+      }
+
+      table td:hover {
+        background: #ddd;
+        cursor: pointer;
+      }
+
+      table td {
+        border: none;
+        border-right: solid 1px #ddd;
+        border-bottom: solid 1px #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      tbody tr:nth-child(odd) td {
+        background-color: turquoise;
+      }
+
+      table td:last-child {
+        border-right: none;
+      }
+
+      /* tfoot tr:last-child td {
+                border-bottom: none;
+            } */
+      thead tr:first-child td {
+        border-top: solid 1px #ddd;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>编号</td>
+          <td>标题</td>
+          <td>网址</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>在线社区</td>
+          <td>houdunren.com</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>开源社区</td>
+          <td>hdcms.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>开发实战</td>
+          <td>houdunwang.com</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>a</td>
+          <td>b</td>
+          <td>c</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+}
+.table {
+  display: table;
+  border: solid 2px #dddddd;
+  box-shadow: 0 0 5px rgba(100, 100, 100, 0.2);
+}
+.table nav {
+  display: table-caption;
+  text-align: center;
+  background-color: crimson;
+  color: white;
+  font-size: 25px;
+}
+.table section:nth-of-type(1) {
+  display: table-header-group;
+  background-color: cadetblue;
+}
+.table section:nth-of-type(2) {
+  display: table-row-group;
+}
+.table section:nth-of-type(3) {
+  display: table-footer-group;
+  background-color: aquamarine;
+}
+.table section ul {
+  display: table-row;
+}
+.table section ul li {
+  display: table-cell;
+  border: solid 1px #dddddd;
+  padding: 10px;
+  text-align: center;
+}

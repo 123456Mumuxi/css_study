@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用skew制作炫酷按钮</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #353b48;
+      }
+      main {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main a {
+        color: #ecf0f1;
+        font-size: 1.5em;
+        text-decoration: none;
+        border: solid 3px #c0392b;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 55px;
+        position: relative;
+        overflow: hidden;
+        text-shadow: 4px 4px 5px rgba(141, 236, 240, 0.8);
+      }
+      .btn::after {
+        content: "";
+        width: 0;
+        height: 100%;
+        position: absolute;
+        transform: skew(45deg);
+        background: #e74c3c;
+        z-index: -1;
+        transition: 0.5s;
+      }
+      .btn:hover::after {
+        width: 200%;
+        opacity: 0.4;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="" class="btn">
+        houdunren
+      </a>
+    </main>
+  </body>
+</html>

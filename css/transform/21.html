@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>红心点赞案例</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        width: 100px;
+        height: 400px;
+        position: relative;
+      }
+      i.fa {
+        font-size: 100px;
+        color: #bdc3c7;
+        position: absolute;
+        transition: 1s;
+      }
+      main.heart i.fa {
+        transform: scale(3);
+        opacity: 0;
+        color: #f30606;
+      }
+      main.heart i.fa:nth-child(2) {
+        transform: scale(1);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main onclick="heart()">
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      <i class="fa fa-heart" aria-hidden="true"></i>
+    </main>
+    <script>
+      function heart() {
+        $("main").toggleClass("heart");
+      }
+    </script>
+  </body>
+</html>

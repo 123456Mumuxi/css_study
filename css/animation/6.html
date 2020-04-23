@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微场景</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 10vh 1fr 10vh;
+      }
+      header {
+        background: #3498db;
+        font-size: 2em;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      main {
+        background: url(./images/library.jpg) no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      main div {
+        width: 80vw;
+        border-radius: 10px;
+        color: white;
+        opacity: 0.7;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        line-height: 1.5em;
+      }
+      main div:nth-child(1) {
+        background: #3498db;
+        transform: translateY(-30px);
+      }
+      main div:nth-child(2) {
+        background: #2ecc71;
+      }
+      footer {
+        background: #2c3e50;
+        font-size: 1.5em;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>后盾人</header>
+    <main>
+      <div>
+        我曾经一度很迷茫，在学了Vue、React的实战开发和应用以后，好像遇到了一些瓶颈，不知道该怎样继续深入下去。相信这也是很多一两年经验的前端工程师所遇到共同问题，这篇文章，笔者想结合自己的一些成长经历整理出一些路线，帮助各位初中级前端工程师少走一些弯路。
+      </div>
+      <div>
+        笔者毕业于一个很普通的本科学校，非计算机专业，17年的时候刚毕业的时候还不知道自己的方向在哪（实习做过销售、运营、推广）。后来机缘巧合走上了开发这条路，第一年的时候
+        Java
+        和前端都做，慢慢发现了自己的兴趣所在转向前端。第二年的时候跳槽来到杭州，开始前端工程师的生涯。
+      </div>
+    </main>
+    <footer>houdunren.com</footer>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D新年贺卡制作</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #34495e;
+      }
+      .card {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff3838;
+        font-size: 2em;
+        color: white;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(900px) rotateX(50deg);
+      }
+      .card::before,
+      .card::after {
+        background: #f7b731;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        box-sizing: border-box;
+      }
+      .card::before {
+        content: "新年";
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-right: solid 3px #4b6584;
+        transition: 2s;
+        transform-origin: left;
+        padding-right: 20px;
+      }
+      .card::after {
+        content: "快乐";
+        right: 0;
+        top: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-left: solid 3px #4b6584;
+        transition: 2s;
+        transform-origin: right;
+        padding-left: 20px;
+      }
+      .card:hover::before {
+        transform: rotateY(-120deg);
+      }
+      .card:hover::after {
+        transform: rotateY(120deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      Happy
+    </div>
+  </body>
+</html>
